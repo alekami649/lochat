@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AnalysisLevel>6.0-all</AnalysisLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lochat.Shared\Lochat.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Lochat.Console" />
+    <Using Include="Lochat.Console.Commands" />
+    <Using Include="Lochat.Shared" />
+    <Using Include="Lochat.Utilities" />
+    <Using Include="Newtonsoft.Json" />
+  </ItemGroup>
+
+</Project>

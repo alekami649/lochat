@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Lochat.Console": {
+      "commandName": "Project",
+      "commandLineArgs": "join ALEX2011"
+    }
+  }
+}
