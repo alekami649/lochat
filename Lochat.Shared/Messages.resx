@@ -124,4 +124,37 @@
   <data name="Message" xml:space="preserve">
     <value>{0} ({1}) [{2}]: {3}</value>
   </data>
+  <data name="UnsupportedArgumentsCount" xml:space="preserve">
+    <value>You are entered invalid count of arguments. Use "lochat help {0}" for getting help.</value>
+  </data>
+  <data name="NameValue" xml:space="preserve">
+    <value>Your name is {0}. To change it use "lochat settings --name (your_new_name)"</value>
+  </data>
+  <data name="UsernameValue" xml:space="preserve">
+    <value>Your username is: {0}. To change it, use: "lochat settings --username (your_new_username)"</value>
+  </data>
+  <data name="DefaultServerValue" xml:space="preserve">
+    <value>Your default server is: {0}. To change it, use: "lochat settings --defaultServer (your_new_server_name)"</value>
+  </data>
+  <data name="DateFormatValue" xml:space="preserve">
+    <value>Your date format is: {0}. To change it, use: "lochat settings --dateFormat (your_new_date_format)"</value>
+  </data>
+  <data name="SetNameValue" xml:space="preserve">
+    <value>Your name set to: {0}.</value>
+  </data>
+  <data name="SetUsernameValue" xml:space="preserve">
+    <value>Your username set to: {0}.</value>
+  </data>
+  <data name="CurrentVersion" xml:space="preserve">
+    <value>Installed version: {0}.{1}.{2} (rev {3}).</value>
+  </data>
+  <data name="VersionError" xml:space="preserve">
+    <value>Cannot to get your version. Please report this bug to https://github.com/alekami649/lochat/issues.</value>
+  </data>
+  <data name="SetDefaultServerValue" xml:space="preserve">
+    <value>Your default server set to: {0}.</value>
+  </data>
+  <data name="SetDateFormatValue" xml:space="preserve">
+    <value>Your date format set to: {0}.</value>
+  </data>
 </root>

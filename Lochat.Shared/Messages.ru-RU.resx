@@ -144,4 +144,37 @@
   <data name="Message" xml:space="preserve">
     <value>{0} ({1}) [{2}]: {3}</value>
   </data>
+  <data name="UnsupportedArgumentsCount" xml:space="preserve">
+    <value>Вы ввели некорректное количество аргументов. Пожалуйста используйте "lochat help {0}" для получения справки.</value>
+  </data>
+  <data name="NameValue" xml:space="preserve">
+    <value>Ваше имя: {0}. Для изменения введите: "lochat settings --name (Ваше_новое_имя)"</value>
+  </data>
+  <data name="UsernameValue" xml:space="preserve">
+    <value>Ваше имя пользователя: {0}. Для изменения, пожалуйста используйте: "lochat settings --username (Ваше_новое_имя_пользователя)"</value>
+  </data>
+  <data name="DefaultServerValue" xml:space="preserve">
+    <value>Ваше имя стандартного сервера: {0}. Для изменения, используйте: "lochat settings --defaultServer (новое_имя_сервера)".</value>
+  </data>
+  <data name="DateFormatValue" xml:space="preserve">
+    <value>Ваш формат даты и времени: {0}. Для изменения, используйте: "lochat settings --dateFormat (новый_формат_даты_и_времени)"</value>
+  </data>
+  <data name="SetNameValue" xml:space="preserve">
+    <value>Ваше имя изменено на: {0}</value>
+  </data>
+  <data name="SetUsernameValue" xml:space="preserve">
+    <value>Ваше имя пользователя изменено на: {0}.</value>
+  </data>
+  <data name="CurrentVersion" xml:space="preserve">
+    <value>Установленная версия: {0}.{1}.{2} (ревизия {3}).</value>
+  </data>
+  <data name="VersionError" xml:space="preserve">
+    <value>Не удалось получить текущую версию программы. Пожалуйста, сообщите об этой проблеме: https://github.com/alekami649/lochat/issues.</value>
+  </data>
+  <data name="SetDefaultServerValue" xml:space="preserve">
+    <value>Имя стандартного сервера изменено на: {0}.</value>
+  </data>
+  <data name="SetDateFormatValue" xml:space="preserve">
+    <value>Ваш формат даты и времени изменён на {0}.</value>
+  </data>
 </root>

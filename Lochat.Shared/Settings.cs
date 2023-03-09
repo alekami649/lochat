@@ -10,6 +10,7 @@ public class Settings
 {
     public Profile Profile { get; set; } = new();
     public string DefaultServer { get; set; } = "";
+    public string DateFormat { get; set; }
     public string GetDirectoryPath()
     {
         return $@"\\{DefaultServer}\Users\Public\Documents\Lochat";

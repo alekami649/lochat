@@ -32,7 +32,7 @@ public class JoinCommand : ICommand
 
     public Task ExecuteAsync(Settings settings, IEnumerable<string> args)
     {
-        throw new NotImplementedException();
+        return Task.CompletedTask;
     }
 
     public bool IsAsyncEnabled()

@@ -70,6 +70,33 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Installed version: {0}.{1}.{2} (rev {3})..
+        /// </summary>
+        public static string CurrentVersion {
+            get {
+                return ResourceManager.GetString("CurrentVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your date format is: {0}. To change it, use: &quot;lochat settings --dateFormat (your_new_date_format)&quot;.
+        /// </summary>
+        public static string DateFormatValue {
+            get {
+                return ResourceManager.GetString("DateFormatValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your default server is: {0}. To change it, use: &quot;lochat settings --defaultServer (your_new_server_name)&quot;.
+        /// </summary>
+        public static string DefaultServerValue {
+            get {
+                return ResourceManager.GetString("DefaultServerValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Enter server name (leave it empty if you want to connect this computer):  .
         /// </summary>
         public static string EnterDefaultServer {
@@ -133,11 +160,83 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Your name is {0}. To change it use &quot;lochat settings --name (your_new_name)&quot;.
+        /// </summary>
+        public static string NameValue {
+            get {
+                return ResourceManager.GetString("NameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your date format set to: {0}..
+        /// </summary>
+        public static string SetDateFormatValue {
+            get {
+                return ResourceManager.GetString("SetDateFormatValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your default server set to: {0}..
+        /// </summary>
+        public static string SetDefaultServerValue {
+            get {
+                return ResourceManager.GetString("SetDefaultServerValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your name set to: {0}..
+        /// </summary>
+        public static string SetNameValue {
+            get {
+                return ResourceManager.GetString("SetNameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your username set to: {0}..
+        /// </summary>
+        public static string SetUsernameValue {
+            get {
+                return ResourceManager.GetString("SetUsernameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на You are connected to {0}. Use &quot;lochat join&quot; for join chat..
         /// </summary>
         public static string SuccessConnecting {
             get {
                 return ResourceManager.GetString("SuccessConnecting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You are entered invalid count of arguments. Use &quot;lochat help {0}&quot; for getting help..
+        /// </summary>
+        public static string UnsupportedArgumentsCount {
+            get {
+                return ResourceManager.GetString("UnsupportedArgumentsCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your username is: {0}. To change it, use: &quot;lochat settings --username (your_new_username)&quot;.
+        /// </summary>
+        public static string UsernameValue {
+            get {
+                return ResourceManager.GetString("UsernameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cannot to get your version. Please report this bug to https://github.com/alekami649/lochat/issues..
+        /// </summary>
+        public static string VersionError {
+            get {
+                return ResourceManager.GetString("VersionError", resourceCulture);
             }
         }
     }

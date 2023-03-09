@@ -5,7 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lochat.Console", "Lochat.Console\Lochat.Console.csproj", "{A2F2DDDA-A1FC-478A-AC4C-B78EAC02F76A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lochat.Shared", "Lochat.Shared\Lochat.Shared.csproj", "{6E0CE28E-5FB1-447A-AD6F-6DAB8AEB45EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lochat.Shared", "Lochat.Shared\Lochat.Shared.csproj", "{6E0CE28E-5FB1-447A-AD6F-6DAB8AEB45EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{1D149FCF-F67A-4A65-96BC-2F56CDA07B0E}"
+	ProjectSection(SolutionItems) = preProject
+		message_example.txt = message_example.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

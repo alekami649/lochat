@@ -8,6 +8,7 @@ if (!File.Exists(settingsFilePath))
     var name = Console.ReadLine() ?? "Name";
     Console.Write(Messages.EnterYourUsername);
     var username = Console.ReadLine() ?? "username";
+    username = username.Replace('_', ' ').ToLowerInvariant();
     var profile = new Profile(name, username);
     Console.Write(Messages.EnterDefaultServer);
     var defaultServer = Console.ReadLine() ?? Environment.MachineName;
@@ -33,7 +34,7 @@ else if (args == null || args.Length == 0)
     var settings = JsonConvert.DeserializeObject<Settings>(File.ReadAllText(settingsFilePath)) ?? new();
     if (command.IsAsyncEnabled())
     {
-        await command.ExecuteAsync(settings, Array.Empty<string>());
+        await command.ExecuteAsync(settings, Array.Empty<string>()).ConfigureAwait(true);
     }
     else
     {
@@ -49,7 +50,7 @@ else
         var instance = new HelpCommand();
         if (instance.IsAsyncEnabled())
         {
-            await instance.ExecuteAsync(settings, Array.Empty<string>());
+            await instance.ExecuteAsync(settings, Array.Empty<string>()).ConfigureAwait(true);
         }
         else
         {
@@ -61,7 +62,31 @@ else
         var instance = new JoinCommand();
         if (instance.IsAsyncEnabled())
         {
-            await instance.ExecuteAsync(settings, args.Skip(1));
+            await instance.ExecuteAsync(settings, args.Skip(1)).ConfigureAwait(true);
+        }
+        else
+        {
+            instance.Execute(settings, args.Skip(1));
+        }
+    }
+    else if (command.InRange("settings"))
+    {
+        var instance = new SettingsCommand();
+        if (instance.IsAsyncEnabled())
+        {
+            await instance.ExecuteAsync(settings, args.Skip(1)).ConfigureAwait(true);
+        }
+        else
+        {
+            instance.Execute(settings, args.Skip(1));
+        }
+    }
+    else if (command.InRange("version"))
+    {
+        var instance = new VersionCommand();
+        if (instance.IsAsyncEnabled())
+        {
+            await instance.ExecuteAsync(settings, args).ConfigureAwait(true);
         }
         else
         {
