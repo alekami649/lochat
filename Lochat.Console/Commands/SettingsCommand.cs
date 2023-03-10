@@ -62,6 +62,8 @@ public class SettingsCommand : ICommand
                         System.Console.WriteLine(Messages.SetDateFormatValue, settings.DateFormat);
                         settings.DateFormat = value;
                     }
+                    var json = JsonConvert.SerializeObject(settings);
+                    File.WriteAllText("settings.json", json);
                 }
             }
             else

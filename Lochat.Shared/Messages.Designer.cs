@@ -196,6 +196,15 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Error! Settings not specified. Please run &quot;lochat settings --init&quot;..
+        /// </summary>
+        public static string SettingsNotSpecified {
+            get {
+                return ResourceManager.GetString("SettingsNotSpecified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Your username set to: {0}..
         /// </summary>
         public static string SetUsernameValue {

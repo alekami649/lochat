@@ -157,4 +157,7 @@
   <data name="SetDateFormatValue" xml:space="preserve">
     <value>Your date format set to: {0}.</value>
   </data>
+  <data name="SettingsNotSpecified" xml:space="preserve">
+    <value>Error! Settings not specified. Please run "lochat settings --init".</value>
+  </data>
 </root>

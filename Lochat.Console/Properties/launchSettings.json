@@ -1,8 +1,12 @@
 {
   "profiles": {
-    "Lochat.Console": {
+    "Show Version": {
       "commandName": "Project",
-      "commandLineArgs": "join ALEX2011"
+      "commandLineArgs": "version"
+    },
+    "Join ALEX2011": {
+      "commandName": "Project",
+      "commandLineArgs": "join --server ALEX2011"
     }
   }
 }

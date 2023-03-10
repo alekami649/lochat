@@ -177,4 +177,7 @@
   <data name="SetDateFormatValue" xml:space="preserve">
     <value>Ваш формат даты и времени изменён на {0}.</value>
   </data>
+  <data name="SettingsNotSpecified" xml:space="preserve">
+    <value>Ошибка! Настройки не указаны. Используйте: "lochat settingsls --init"</value>
+  </data>
 </root>

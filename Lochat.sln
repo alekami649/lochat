@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решен
 		message_example.txt = message_example.txt
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lochat.Protocol", "Lochat.Protocol\Lochat.Protocol.csproj", "{6F5B7F56-161F-415F-B854-7F4F13C257EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{6E0CE28E-5FB1-447A-AD6F-6DAB8AEB45EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0CE28E-5FB1-447A-AD6F-6DAB8AEB45EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0CE28E-5FB1-447A-AD6F-6DAB8AEB45EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5B7F56-161F-415F-B854-7F4F13C257EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5B7F56-161F-415F-B854-7F4F13C257EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5B7F56-161F-415F-B854-7F4F13C257EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5B7F56-161F-415F-B854-7F4F13C257EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
