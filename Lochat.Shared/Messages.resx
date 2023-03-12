@@ -124,7 +124,7 @@
     <value>Enter your username: </value>
   </data>
   <data name="EnterDefaultServer" xml:space="preserve">
-    <value>Enter server name (leave it empty if you want to connect this computer):  </value>
+    <value>Enter server name (leave it empty if you want to connect this computer): </value>
   </data>
   <data name="FirstSetupEnded" xml:space="preserve">
     <value>First setup ended. Trying to connect {0}...</value>
@@ -151,10 +151,10 @@
     <value>Your username is: {0}. To change it, use: "lochat settings --username (your_new_username)"</value>
   </data>
   <data name="DefaultServerValue" xml:space="preserve">
-    <value>Your default server is: {0}. To change it, use: "lochat settings --defaultServer (your_new_server_name)"</value>
+    <value>Your default server is: {0}. To change it, use: "lochat settings --defaultServer (your_new_server_name)".</value>
   </data>
   <data name="DateFormatValue" xml:space="preserve">
-    <value>Your date format is: {0}. To change it, use: "lochat settings --dateFormat (your_new_date_format)"</value>
+    <value>Your date format is: {0}. To change it, use: "lochat settings --dateFormat (your_new_date_format)".</value>
   </data>
   <data name="SetNameValue" xml:space="preserve">
     <value>Your name set to: {0}.</value>

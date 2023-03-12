@@ -62,7 +62,8 @@ namespace Lochat.Shared {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Command to connect the server&apos;s (0) chat. Avaible arguments:
-        ///&quot;lochat join&quot; - no arguments, connecting to the default server ({0})..
+        ///&quot;lochat join&quot; - no arguments, connecting to the default server ({0}).
+        ///&quot;lochat join (server&apos;s_name)&quot; (1 argument) - connecting to specified server..
         /// </summary>
         public static string JoinCommand {
             get {

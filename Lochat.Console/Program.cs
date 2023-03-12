@@ -1,6 +1,4 @@
-﻿using System.Numerics;
-
-const string settingsFilePath = "settings.json";
+﻿const string settingsFilePath = "settings.json";
 
 if (!File.Exists(settingsFilePath))
 {
@@ -82,6 +80,18 @@ else
     else if (command.InRange("version"))
     {
         var instance = new VersionCommand();
+        if (instance.IsAsyncEnabled())
+        {
+            await instance.ExecuteAsync(settings, args).ConfigureAwait(true);
+        }
+        else
+        {
+            instance.Execute(settings, args.Skip(1));
+        }
+    }
+    else if (command.InRange("init", "initialize"))
+    {
+        var instance = new InitializeCommand();
         if (instance.IsAsyncEnabled())
         {
             await instance.ExecuteAsync(settings, args).ConfigureAwait(true);

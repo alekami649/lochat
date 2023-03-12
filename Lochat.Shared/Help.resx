@@ -119,6 +119,7 @@
   </resheader>
   <data name="JoinCommand" xml:space="preserve">
     <value>Command to connect the server's (0) chat. Avaible arguments:
-"lochat join" - no arguments, connecting to the default server ({0}).</value>
+"lochat join" - no arguments, connecting to the default server ({0}).
+"lochat join (server's_name)" (1 argument) - connecting to specified server.</value>
   </data>
 </root>

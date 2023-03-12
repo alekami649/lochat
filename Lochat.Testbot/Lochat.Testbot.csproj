@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lochat.BotAPI\Lochat.BotAPI.csproj" />
     <ProjectReference Include="..\Lochat.Shared\Lochat.Shared.csproj" />
   </ItemGroup>
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lochat.Console.Commands;
+﻿namespace Lochat.Console.Commands;
 
 public class HelpCommand : ICommand
 {

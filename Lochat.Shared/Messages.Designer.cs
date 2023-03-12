@@ -79,7 +79,7 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Your date format is: {0}. To change it, use: &quot;lochat settings --dateFormat (your_new_date_format)&quot;.
+        ///   Ищет локализованную строку, похожую на Your date format is: {0}. To change it, use: &quot;lochat settings --dateFormat (your_new_date_format)&quot;..
         /// </summary>
         public static string DateFormatValue {
             get {
@@ -88,7 +88,7 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Your default server is: {0}. To change it, use: &quot;lochat settings --defaultServer (your_new_server_name)&quot;.
+        ///   Ищет локализованную строку, похожую на Your default server is: {0}. To change it, use: &quot;lochat settings --defaultServer (your_new_server_name)&quot;..
         /// </summary>
         public static string DefaultServerValue {
             get {
@@ -97,7 +97,7 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Enter server name (leave it empty if you want to connect this computer):  .
+        ///   Ищет локализованную строку, похожую на Enter server name (leave it empty if you want to connect this computer): .
         /// </summary>
         public static string EnterDefaultServer {
             get {

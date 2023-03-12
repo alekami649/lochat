@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Formats.Tar;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Schema;
-
-namespace Lochat.Console.Commands;
+﻿namespace Lochat.Console.Commands;
 
 public class SendCommand : ICommand
 {

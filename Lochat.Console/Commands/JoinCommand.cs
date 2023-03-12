@@ -43,7 +43,7 @@ public class JoinCommand : ICommand
                 foreach (var message in messages.ToArray())
                 {
                     var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
-                    System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
                 }
             }
             else
@@ -52,7 +52,7 @@ public class JoinCommand : ICommand
                 foreach (var message in messages.ToArray())
                 {
                     var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
-                    System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
                 }
             }
             var watcher = new FileSystemWatcher(settings.GetDirectoryPath(), "*.json")
@@ -78,7 +78,7 @@ public class JoinCommand : ICommand
             foreach (var message in messages.ToArray())
             {
                 var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
-                System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
             }
         }
         else
