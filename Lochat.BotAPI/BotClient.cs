@@ -9,6 +9,10 @@ public class LochatBotClient
     readonly FileSystemWatcher watcher;
     DateTime lastUtcRead;
 
+    /// <summary>
+    /// Initializes bot client
+    /// </summary>
+    /// <param name="botSettings">Settings from settings.json</param>
     public LochatBotClient(Settings botSettings)
     {
         settings = botSettings;
@@ -44,6 +48,9 @@ public class LochatBotClient
 
     public delegate void MessageReceivedEventHandler(object sender, Message message, Chat chat, Settings settings);
 
+    /// <summary>
+    /// Functions, that will be invoked on every message.
+    /// </summary>
     public event MessageReceivedEventHandler OnMessageReceived;
 
     

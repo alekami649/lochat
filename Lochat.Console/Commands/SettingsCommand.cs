@@ -100,6 +100,10 @@ public class SettingsCommand : ICommand
                 System.Console.WriteLine(Messages.UnsupportedArgumentsCount, "settings");
             }
         }
+        else
+        {
+            System.Console.WriteLine(Help.MainHelp);
+        }
     }
 
     public async Task ExecuteAsync(Settings settings, IEnumerable<string> args)

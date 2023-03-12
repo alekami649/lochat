@@ -118,8 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="JoinCommand" xml:space="preserve">
-    <value>Команда для подключения к чату сервера ({0}). Доступные аргументы:
+    <value>Команда для подключения к чату сервера ({0}). Доступные варианты:
 "lochat join" (без аргументов): подключение к стандартному серверу ({0}).
 "lochat join (имя_серврера)" (1 аргумент) - подключение к заданному серверу.</value>
+  </data>
+  <data name="SendCommand" xml:space="preserve">
+    <value>Команда для отправки сообщения на сервер. Доступные варианты:
+"lochat send (текст_сообщения)" (1 аргумент) - отправляет сообщение с заданным текстом на стандартный сервер ({0}).
+"lochat send (текст_сообщения) (имя_сервера)" (2 аргумента) - отправляет сообщение с заданным текстом на заданный сервер.</value>
+  </data>
+  <data name="InitCommand" xml:space="preserve">
+    <value>Команда для инициализации сервера Lochat. Доступные варианты:
+"lochat init" (0 аргументов) - инициализирует сервер Lochat в папке "C:\Shared\Lochat".
+"lochat init (путь_до_папки)" (1 аргумент) - инициализирует сервер Lochat в заданной папке.</value>
+  </data>
+  <data name="SettingsCommand" xml:space="preserve">
+    <value>Команда для управления настройками Lochat. Доступные варианты:
+"lochat settings (параметр)" (1 аргумент) - Показывает значение заданного параметра.
+"lochat settings (параметр) (значение_для_установки)" (2 аргумента) - устанавливает заданное значение заданному параметру.
+Доступные параметры (каждый можно использовать с префиксом "--"): name, username, default_server, date_format, folder_path.</value>
+  </data>
+  <data name="MainHelp" xml:space="preserve">
+    <value>Помощь по Lochat:
+"lochat join" - подключается к чату.
+"lochat send" - отправляет сообщение.
+"lochat help" - помощь по каждой команде.
+"lochat init" - инициализирует сервер Lochat.</value>
   </data>
 </root>

@@ -17,18 +17,18 @@ public class HelpCommand : ICommand
             {
                 System.Console.WriteLine(Help.JoinCommand);
             }
-            //else if (command.InRange("send"))
-            //{
-            //    System.Console.WriteLine(Help.SendCommand);
-            //}
-            //else if (command.InRange("join"))
-            //{
-            //    System.Console.WriteLine(Help.JoinCommmand);
-            //}
-            //else if (command.InRange("settings"))
-            //{
-            //    System.Console.WriteLine(Help.SettingsCommand);
-            //}
+            else if (command.InRange("send"))
+            {
+                System.Console.WriteLine(Help.SendCommand);
+            }
+            else if (command.InRange("init", "initialize"))
+            {
+                System.Console.WriteLine(Help.InitCommand);
+            }
+            else if (command.InRange("settings"))
+            {
+                System.Console.WriteLine(Help.SettingsCommand);
+            }
         }
     }
 

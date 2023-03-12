@@ -9,11 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Betalgo.OpenAI.GPT3" Version="6.7.3" />
+    <PackageReference Include="Lochat.BotAPI" Version="0.1.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lochat.BotAPI\Lochat.BotAPI.csproj" />
     <ProjectReference Include="..\Lochat.Shared\Lochat.Shared.csproj" />
   </ItemGroup>
 

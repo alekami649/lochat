@@ -118,8 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="JoinCommand" xml:space="preserve">
-    <value>Command to connect the server's (0) chat. Avaible arguments:
+    <value>Command to connect the server's (0) chat. Available options:
 "lochat join" - no arguments, connecting to the default server ({0}).
 "lochat join (server's_name)" (1 argument) - connecting to specified server.</value>
+  </data>
+  <data name="SendCommand" xml:space="preserve">
+    <value>Command to send message to the server ({0})'s chat. Available options:
+"lochat send (message_text)" (1 arguments) - sending specified message to default server ({0}).
+"lochat send (message_text) (server_name)" (2 arguments) - sending specified message to specified server.</value>
+  </data>
+  <data name="InitCommand" xml:space="preserve">
+    <value>Command to initialize current server. Available options:
+"lochat init" (0 arguments) - initializing Lochat server in "C:\Shared\Lochat" folder.
+"lochat init (folder_path)" (1 argument) - initializing Lochat server in specified folder path.</value>
+  </data>
+  <data name="SettingsCommand" xml:space="preserve">
+    <value>Command to configurate your settings. Available options:
+"lochat settings (setting_name)" (1 argument) - Shows value of specified setting.
+"lochat settings (setting_name) (value_to_set)" (2 arguments) - Sets specified value for specified setting.
+Available setting names (can use any with "--" prefix): name, username, default_server, date_format, folder_path.</value>
+  </data>
+  <data name="MainHelp" xml:space="preserve">
+    <value>Help for Lochat:
+"lochat join" - connecting to chat.
+"lochat send" - sending message.
+"lochat help" - help for any command.
+"lochat init" - initializing Lochat server.</value>
   </data>
 </root>
