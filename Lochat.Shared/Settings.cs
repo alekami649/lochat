@@ -1,19 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace Lochat.Console;
 
 public class Settings
 {
+    [JsonProperty("profile", Order = 1), JsonRequired]
     public Profile Profile { get; set; } = new();
+
+    [JsonProperty("defaultServer", Order = 2), JsonRequired]
     public string DefaultServer { get; set; } = "";
-    public string DateFormat { get; set; }
+
+    [JsonProperty("dateFormat", Order = 3), JsonRequired]
+    public string DateFormat { get; set; } = "ss':'mm':'HH' 'dd'.'MM'.'yyyy";
+
+    [JsonProperty("folderPath", Order = 4)]
+    public string FolderPath { get; set; } = @"\Shared\Lochat";
+
     public string GetDirectoryPath()
     {
-        return $@"\\{DefaultServer}\Users\Public\Documents\Lochat";
+        return $@"\\{DefaultServer}\{FolderPath}";
     }
 }
 public class Profile
@@ -32,6 +37,8 @@ public class Profile
         Username = username;
     }
 
+    [JsonProperty("name", Order = 1), JsonRequired]
     public string Name { get; set; } = "";
+    [JsonProperty("username", Order = 2), JsonRequired]
     public string Username { get; set; } = "";
 }

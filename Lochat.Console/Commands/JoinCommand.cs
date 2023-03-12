@@ -4,6 +4,9 @@ namespace Lochat.Console.Commands;
 
 public class JoinCommand : ICommand
 {
+    DateTime lastUtcRead = DateTime.UtcNow;
+    Settings settings = new();
+
     public void Execute(Settings settings, IEnumerable<string> args)
     {
         if (settings == null)
@@ -13,6 +16,7 @@ public class JoinCommand : ICommand
         }
         else
         {
+            this.settings = settings;
             var server = "";
             if (!args.Any())
             {
@@ -20,11 +24,11 @@ public class JoinCommand : ICommand
             }
             else if (args.Count() == 1)
             {
-                server = args.First();
+                settings.DefaultServer = args.First();
             }
             else if (args.Count() == 2)
             {
-                server = args.Skip(1).First();
+                settings.DefaultServer = args.Skip(1).First();
             }
             else
             {
@@ -32,44 +36,52 @@ public class JoinCommand : ICommand
                 return;
             }
             System.Console.WriteLine(Messages.SuccessConnecting, server);
-        }
-    }
-
-    private void Connect(Settings settings, string server, ConnectProtocol protocol)
-    {
-        if (protocol == ConnectProtocol.Unknown)
-        {
-            return;
-        }
-        else if (protocol == ConnectProtocol.FileWatcher)
-        {
-            var watcher = new FileSystemWatcher($@"\{server}\Users\Public\Documents\Lochat", "*.json")
+            var chat = JsonConvert.DeserializeObject<Chat>(File.ReadAllText(Path.Combine(settings.GetDirectoryPath(), "chat.json"))) ?? new();
+            if (chat.Messages.Count < 10)
+            {
+                var messages = chat.Messages.ToArray();
+                foreach (var message in messages.ToArray())
+                {
+                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                }
+            }
+            else
+            {
+                var messages = chat.Messages.TakeLast(10).ToArray();
+                foreach (var message in messages.ToArray())
+                {
+                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                }
+            }
+            var watcher = new FileSystemWatcher(settings.GetDirectoryPath(), "*.json")
             {
                 NotifyFilter = NotifyFilters.LastWrite
             };
             watcher.Changed += OnFileChanged;
+            watcher.EnableRaisingEvents = true;
+            System.Console.ReadKey();
             watcher.Dispose();
-            Task.Run(async () => await RunRead(settings, server, protocol).ConfigureAwait(false));
         }
     }
-
     private void OnFileChanged(object sender, FileSystemEventArgs e)
     {
-        if (e.Name == "chat.json")
+        if (e.Name == "chat.json" && e.ChangeType == WatcherChangeTypes.Changed)
         {
-            var outChannel = System.Console.Out;
+#pragma warning disable CA5394 // Random is unsecure o_O
+            Thread.Sleep(Random.Shared.Next(100, 500));
+#pragma warning restore CA5394 // Random is unsecure O_o
+            var chat = JsonConvert.DeserializeObject<Chat>(File.ReadAllText(e.FullPath)) ?? new();
+            var messages = chat.Messages.Where(message => message.Sent > lastUtcRead).ToArray();
+            lastUtcRead = DateTime.UtcNow;
+            foreach (var message in messages.ToArray())
+            {
+                System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+            }
         }
         else
         {
             return;
         }
-    }
-
-    private async Task RunRead(Settings settings, string server, ConnectProtocol protocol)
-    {
-        var inChannel = System.Console.In;
-        var message = await inChannel.ReadLineAsync().ConfigureAwait(false);
-        
     }
 
     public Task ExecuteAsync(Settings settings, IEnumerable<string> args)

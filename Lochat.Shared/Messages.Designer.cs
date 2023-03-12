@@ -151,11 +151,20 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Server ({0})&apos;s folder path is {1}..
+        /// </summary>
+        public static string FolderPathValue {
+            get {
+                return ResourceManager.GetString("FolderPathValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на {0} ({1}) [{2}]: {3}.
         /// </summary>
-        public static string Message {
+        public static string MessageFormat {
             get {
-                return ResourceManager.GetString("Message", resourceCulture);
+                return ResourceManager.GetString("MessageFormat", resourceCulture);
             }
         }
         
@@ -165,6 +174,15 @@ namespace Lochat.Shared {
         public static string NameValue {
             get {
                 return ResourceManager.GetString("NameValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your message with text &quot;{0}&quot; was sent successfully..
+        /// </summary>
+        public static string SentSuccessfully {
+            get {
+                return ResourceManager.GetString("SentSuccessfully", resourceCulture);
             }
         }
         
@@ -183,6 +201,15 @@ namespace Lochat.Shared {
         public static string SetDefaultServerValue {
             get {
                 return ResourceManager.GetString("SetDefaultServerValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Server ({0})&apos;s folder path set to: {1}..
+        /// </summary>
+        public static string SetFolderPathValue {
+            get {
+                return ResourceManager.GetString("SetFolderPathValue", resourceCulture);
             }
         }
         
@@ -214,7 +241,7 @@ namespace Lochat.Shared {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на You are connected to {0}. Use &quot;lochat join&quot; for join chat..
+        ///   Ищет локализованную строку, похожую на You are connected to {0}. Press any key to leave..
         /// </summary>
         public static string SuccessConnecting {
             get {

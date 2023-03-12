@@ -133,16 +133,13 @@
     <value>Сервер {0} не инициализирован. Возможно Вы забыли "lochat init"?</value>
   </data>
   <data name="SuccessConnecting" xml:space="preserve">
-    <value>Вы подключились к {0}. Используйте "lochat join" для подключения к чату.</value>
+    <value>Вы подключились к {0}. Нажмите любую клавишу чтобы выйти.</value>
   </data>
   <data name="CommandNotFound" xml:space="preserve">
     <value>Команда {0} не найдена. Используйте "lochat help" для получения списка команд.</value>
   </data>
   <data name="EnterYourMessage" xml:space="preserve">
     <value>Введите Ваше сообщение: </value>
-  </data>
-  <data name="Message" xml:space="preserve">
-    <value>{0} ({1}) [{2}]: {3}</value>
   </data>
   <data name="UnsupportedArgumentsCount" xml:space="preserve">
     <value>Вы ввели некорректное количество аргументов. Пожалуйста используйте "lochat help {0}" для получения справки.</value>
@@ -179,5 +176,17 @@
   </data>
   <data name="SettingsNotSpecified" xml:space="preserve">
     <value>Ошибка! Настройки не указаны. Используйте: "lochat settingsls --init"</value>
+  </data>
+  <data name="MessageFormat" xml:space="preserve">
+    <value>{0} ({1}) [{2}]: {3}</value>
+  </data>
+  <data name="SentSuccessfully" xml:space="preserve">
+    <value>Ваше сообщение с текстом "{0}" было успешно отправлено.</value>
+  </data>
+  <data name="FolderPathValue" xml:space="preserve">
+    <value>Папка севрвера ({0}): {1}</value>
+  </data>
+  <data name="SetFolderPathValue" xml:space="preserve">
+    <value>Папка сервера ({0}) изменена на: {1}.</value>
   </data>
 </root>

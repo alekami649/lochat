@@ -7,6 +7,18 @@
     "Join ALEX2011": {
       "commandName": "Project",
       "commandLineArgs": "join --server ALEX2011"
+    },
+    "Join kimsite14": {
+      "commandName": "Project",
+      "commandLineArgs": "join --server KIMSITE14"
+    },
+    "Send Message": {
+      "commandName": "Project",
+      "commandLineArgs": "send \"hi hi hi\" kimsite14"
+    },
+    "Set Name to \"CoGIS\"": {
+      "commandName": "Project",
+      "commandLineArgs": "settings --name \"CoGIS\""
     }
   }
 }
