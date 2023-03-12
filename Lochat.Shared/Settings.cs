@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Lochat.Console;
+namespace Lochat.Shared;
 
 public class Settings
 {

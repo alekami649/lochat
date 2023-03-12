@@ -1,0 +1,9 @@
+{
+  "profile": {
+    "name": "ChatGPT",
+    "username": "@chatgpt"
+  },
+  "defaultServer": "KIMSITE14",
+  "dateFormat": "dd",
+  "folderPath": "Shared\\Lochat"
+}

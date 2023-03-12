@@ -1,6 +1,4 @@
-﻿using Lochat.Console;
-
-namespace Lochat.Shared;
+﻿namespace Lochat.Shared;
 
 public class Message
 {
