@@ -42,7 +42,8 @@ public class JoinCommand : ICommand
                 var messages = chat.Messages.ToArray();
                 foreach (var message in messages.ToArray())
                 {
-                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                    var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
+                    System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
                 }
             }
             else
@@ -50,7 +51,8 @@ public class JoinCommand : ICommand
                 var messages = chat.Messages.TakeLast(10).ToArray();
                 foreach (var message in messages.ToArray())
                 {
-                    System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                    var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
+                    System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
                 }
             }
             var watcher = new FileSystemWatcher(settings.GetDirectoryPath(), "*.json")
@@ -75,7 +77,8 @@ public class JoinCommand : ICommand
             lastUtcRead = DateTime.UtcNow;
             foreach (var message in messages.ToArray())
             {
-                System.Console.WriteLine(Messages.MessageFormat, message.Sender.Name, message.Sender.Username, message.Sent.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
+                var convertedDateTime = TimeZoneInfo.ConvertTimeFromUtc(message.Sent, TimeZoneInfo.Local);
+                System.Console.WriteLine(Messages.Message, message.Sender.Name, message.Sender.Username, convertedDateTime.ToString(settings.DateFormat, CultureInfo.InvariantCulture), message.Text);
             }
         }
         else

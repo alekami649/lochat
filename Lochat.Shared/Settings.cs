@@ -11,7 +11,7 @@ public class Settings
     public string DefaultServer { get; set; } = "";
 
     [JsonProperty("dateFormat", Order = 3), JsonRequired]
-    public string DateFormat { get; set; } = "ss':'mm':'HH' 'dd'.'MM'.'yyyy";
+    public string DateFormat { get; set; } = "HH':'mm':'ss' 'dd'.'MM'.'yyyy";
 
     [JsonProperty("folderPath", Order = 4)]
     public string FolderPath { get; set; } = @"\Shared\Lochat";
